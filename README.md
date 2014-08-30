@@ -1,4 +1,4 @@
-mathjax-extension-img
+mathjax-extension-TeX-img
 =========================
 
 MathJax TeX extension to embed images in math.
