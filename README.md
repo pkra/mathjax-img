@@ -17,7 +17,7 @@ Provides a macro for embedding images in math.
 
 # Usage:
 
-    \img{URL}{vertical alignment}{width}{height}
+    \img[vertical alignment][width][height]{URL}
 
 This adds an `\img` macro for inserting images into a MathJax expression.  
 It takes 4 arguments:  the URL for the image, the vertical alignment value, 
