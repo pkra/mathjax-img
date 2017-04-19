@@ -78,5 +78,5 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
           });
         });
 MathJax.Callback.Queue(
-  ["loadComplete",MathJax.Ajax,"[Contrib]/img/unpacked/img.js"]
+  ["loadComplete",MathJax.Ajax,"[img]/unpacked/img.js"]
 );

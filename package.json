@@ -1,0 +1,24 @@
+{
+  "name": "mathjax-img",
+  "filename": "img.js",
+  "version": "1.0.0",
+  "description": "img extension for MathJax's TeX input",
+  "keywords": [
+    "MathJax",
+    "LaTeX",
+    "image"
+  ],
+  "license": "Apache-2.0",
+  "contributors": [
+    "Peter Krautzberger (https://github.com/pkra)",
+    "Yves Delley (https://github.com/burnpanck)"
+    "MathJax Consortium <info@mathjax.org> (http://www.mathjax.org)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pkra/mathjax-img"
+  },
+  "scripts": {
+    "test": "echo 'No tests yet'"
+  }
+}
