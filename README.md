@@ -29,11 +29,11 @@ To use a CDN copy, you need MathJax v2.4 (or higher) and configure a custom path
 
 Then add the extension to your configuration using the custom path. For example,
 
-     <script type="text/x-mathjax-config>
+    <script type="text/x-mathjax-config">
         MathJax.Ajax.config.path["img"] = "https://cdn.rawgit.com/pkra/mathjax-img/1.0.0/";
         MathJax.Hub.Config({
         extensions: ["tex2jax.js","[img]/img.js"],
         jax: ["input/TeX","output/HTML-CSS"],
         tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
         });
-     </script>
+    </script>
