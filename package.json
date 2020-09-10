@@ -22,7 +22,11 @@
   "bugs": {
     "url": "https://github.com/pkra/mathjax-img/issues"
   },
+  "devDependencies": {
+    "standard-version": "^9.0.0"
+  },
   "scripts": {
+    "release": "standard-version",
     "test": "echo 'No tests yet'"
   }
 }
