@@ -18,12 +18,40 @@ This adds an `\img` macro for inserting images into a MathJax expression. It tak
 
 With no vertical-align value, the image will sit on the baseline. With no width or height, the image will be its natural size. With one of the width or height specified, the image will be scaled to match that dimension while keeping the aspect ratio the same. If both are given, then image will be scaled to match both dimensions, without regard to the original aspect ratio.
 
-## References
+## Using NodeJS
 
-* MathJax: http://www.mathjax.org/
-* Original discussion https://groups.google.com/d/msg/mathjax-users/SXjY3rQXOzc/YGcc48HwDR4J
+### MathJax v3 (mathjax-img v2)
+
+Install `mathjax-full` and `mathjax-img` and follow the instructions for NodeJS, e.g.,
+
+    const { TeX } = require('mathjax/js/input/tex.js');
+    const img = require('mathjax-img');
+    const tex = new TeX({
+    packages: ['img']
+    });
+
+
+### MathJax v2 (mathjax-img v1 only)
+
+Install mathjax-node and mathjax-img and follow the instructions for mathjax-node, e.g.,
+
+    const mathjax = require('mathjax-node');
+    mathjax.config({
+    paths: {
+        img: path.dirname(require.resolve('mathjax-img')),
+    },
+    extensions:
+        '[img]/img'
+    });
+
 
 ## Using a CDN
+
+### MathJax v3
+
+TBD
+
+### MathJax v2
 
 To use a CDN copy, you need MathJax v2.4 (or higher) and configure a custom path `[img]` as described in the [MathJax documentation](http://docs.mathjax.org/en/latest/options/ThirdParty.html#custom-extension-path-configuration).
 
@@ -37,3 +65,10 @@ Then add the extension to your configuration using the custom path. For example,
         tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
         });
      </script>
+
+## References
+
+* MathJax: http://www.mathjax.org/
+* Original discussion https://groups.google.com/d/msg/mathjax-users/SXjY3rQXOzc/YGcc48HwDR4J
+* MathJax v3 https://github.com/mathjax/MathJax/issues/2517#issuecomment-686709079
+
