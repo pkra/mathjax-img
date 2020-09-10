@@ -10,7 +10,7 @@
  *
  *  ---------------------------------------------------------------------
  *
- *  Copyright (c) 2014 The MathJax Consortium
+ *  Copyright (c) 2020 The MathJax Consortium
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -24,4 +24,60 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-MathJax.Extension["TeX/img"]={version:"0.1"},MathJax.Hub.Register.StartupHook("TeX Jax Ready",function(){var a=MathJax.InputJax.TeX,b=MathJax.ElementJax.mml,c=function(b){return""===b||b.match(/^\s*([-+]?(\.\d+|\d+(\.\d*)?))\s*(pt|em|ex|mu|px|mm|cm|in|pc)\s*$/)?b.replace(/ /g,""):(a.Error("Bad dimension for image: "+b),void 0)};a.Definitions.macros.img="myImage",a.Parse.Augment({myImage:function(d){var e=this.GetBrackets(d,""),f={valign:"",width:"",height:""};if(-1!==e.indexOf(",")||-1!==e.indexOf("="))for(var g=e.split(","),h=0,i=g.length;i>h;++h){var j=g[h].split("="),k=j[0].replace(/^ +/,"").replace(/ +$/,"");f.hasOwnProperty(k)||a.Error(["UnknownKey","Unknown parameter in %1",k]);var l=j.slice(1).join("=");l=c(l),f[k]=l}else f.valign=c(e),f.width=c(this.GetBrackets(d,"")),f.height=c(this.GetBrackets(d,""));f.src=this.GetArgument(d),f.valign||delete f.valign,f.width||delete f.width,f.height||delete f.height,this.Push(this.mmlToken(b.mglyph().With(f)))}})}),MathJax.Callback.Queue(["loadComplete",MathJax.Ajax,"[img]/img.js"]);
+
+const Configuration_js_1 = require('mathjax/js/input/tex/Configuration.js');
+const SymbolMap_js_1 = require('mathjax/js/input/tex/SymbolMap.js');
+const TexError = require('mathjax/js/input/tex/TexError');
+
+const CheckDimen = function (dimen) {
+  if (dimen === '') return '';
+  if (
+    dimen.match(
+      /^\s*([-+]?(\.\d+|\d+(\.\d*)?))\s*(pt|em|ex|mu|px|mm|cm|in|pc)\s*$/
+    )
+  ) {
+    return dimen.replace(/ /g, '');
+  }
+  throw new TexError('BadImageDimen', 'Bad dimension for image: %1', dimen);
+};
+
+new SymbolMap_js_1.CommandMap(
+  'img',
+  { img: 'Img' },
+  {
+    Img(parser, name) {
+      const arg = parser.GetBrackets(name, '');
+      const def = {
+        valign: '',
+        width: '',
+        height: '',
+      };
+      if (arg.match(/[,=]/)) {
+        for (const pair of arg.split(/\s*,\s*/)) {
+          const [key, ...value] = pair.split(/\s*=\s*/);
+          if (!def.hasOwnProperty(key))
+            throw new TexError(
+              'UnknownKey',
+              'Unknown parameter "%1" in %2',
+              key,
+              name
+            );
+          def[key] = CheckDimen(value.join('='));
+        }
+      } else {
+        def.valign = CheckDimen(arg);
+        def.width = CheckDimen(parser.GetBrackets(name, ''));
+        def.height = CheckDimen(parser.GetBrackets(name, ''));
+      }
+      def.src = parser.GetArgument(name);
+      if (!def.valign) delete def.valign;
+      if (!def.width) delete def.width;
+      if (!def.height) delete def.height;
+      parser.Push(parser.create('token', 'mglyph', def));
+    },
+  }
+);
+
+exports.HtmlConfiguration = Configuration_js_1.Configuration.create('img', {
+  handler: { macro: ['img'] },
+});
