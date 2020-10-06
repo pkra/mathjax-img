@@ -25,8 +25,8 @@
  *  limitations under the License.
  */
 
-const Configuration_js_1 = require('mathjax/js/input/tex/Configuration.js');
-const SymbolMap_js_1 = require('mathjax/js/input/tex/SymbolMap.js');
+const Configuration = require('mathjax/js/input/tex/Configuration.js');
+const SymbolMap = require('mathjax/js/input/tex/SymbolMap.js');
 const TexError = require('mathjax/js/input/tex/TexError');
 
 const CheckDimen = function (dimen) {
@@ -41,7 +41,7 @@ const CheckDimen = function (dimen) {
   throw new TexError('BadImageDimen', 'Bad dimension for image: %1', dimen);
 };
 
-new SymbolMap_js_1.CommandMap(
+new SymbolMap.CommandMap(
   'img',
   { img: 'Img' },
   {
@@ -78,6 +78,6 @@ new SymbolMap_js_1.CommandMap(
   }
 );
 
-exports.HtmlConfiguration = Configuration_js_1.Configuration.create('img', {
+exports.HtmlConfiguration = Configuration.Configuration.create('img', {
   handler: { macro: ['img'] },
 });
