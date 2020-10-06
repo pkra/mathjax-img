@@ -25,9 +25,9 @@
  *  limitations under the License.
  */
 
-const Configuration = require('mathjax/js/input/tex/Configuration.js');
-const SymbolMap = require('mathjax/js/input/tex/SymbolMap.js');
-const TexError = require('mathjax/js/input/tex/TexError');
+const Configuration = require('mathjax-full/js/input/tex/Configuration.js');
+const SymbolMap = require('mathjax-full/js/input/tex/SymbolMap.js');
+const TexError = require('mathjax-full/js/input/tex/TexError');
 
 const CheckDimen = function (dimen) {
   if (dimen === '') return '';
