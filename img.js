@@ -78,6 +78,6 @@ new SymbolMap.CommandMap(
   }
 );
 
-exports.HtmlConfiguration = Configuration.Configuration.create('img', {
+exports.configuration = Configuration.Configuration.create('img', {
   handler: { macro: ['img'] },
 });
