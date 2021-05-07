@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/pkra/mathjax-img/compare/v3.0.0...v3.1.0) (2021-05-07)
+
+
+### Features
+
+* client-side build ([#12](https://github.com/pkra/mathjax-img/issues/12)) ([6ea7b0c](https://github.com/pkra/mathjax-img/commit/6ea7b0cab83c6f07cb374fb1e2441cc1b00a49be)), closes [#7](https://github.com/pkra/mathjax-img/issues/7)
+
 ## [3.0.0](https://github.com/pkra/mathjax-img/compare/v2.0.0...v3.0.0) (2020-10-06)
 
 
