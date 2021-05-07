@@ -54,13 +54,13 @@ For client-side use, you need load `img.min.js`.
 Follow the instructions from the MathJax documentation on [loading a third-party extensions](http://docs.mathjax.org/en/latest/web/webpack.html#loading-the-extension), e.g.,
 
     MathJax = {
-    loader: {
-        load: ['[img]/img.min.js'],
-        paths: {img: 'https://cdn.jsdelivr.net/npm/mathjax-img@3'}
-    },
-    tex: {
-        packages: {'[+]': ['img']}
-    }
+        loader: {
+            load: ['[img]/img.min.js'],
+            paths: {img: 'https://cdn.jsdelivr.net/npm/mathjax-img@3'}
+        },
+        tex: {
+            packages: {'[+]': ['img']}
+        }
     };
 
 ### MathJax v2
