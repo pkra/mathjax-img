@@ -25,9 +25,9 @@ With no vertical-align value, the image will sit on the baseline. With no width 
 Install `mathjax-full` and `mathjax-img` and follow the instructions for NodeJS, e.g.,
 
     const { TeX } = require('mathjax/js/input/tex.js');
-    const img = require('mathjax-img');
+    const img = require('mathjax-img').configuration;
     const tex = new TeX({
-    packages: ['img']
+    packages: [img.name]
     });
 
 
@@ -45,11 +45,23 @@ Install mathjax-node and mathjax-img and follow the instructions for mathjax-nod
     });
 
 
-## Using a CDN
+## Using a browser
 
 ### MathJax v3
 
-TBD
+For client-side use, you need load `img.min.js`.
+
+Follow the instructions from the MathJax documentation on [loading a third-party extensions](http://docs.mathjax.org/en/latest/web/webpack.html#loading-the-extension), e.g.,
+
+    MathJax = {
+    loader: {
+        load: ['[img]/img.min.js'],
+        paths: {img: 'https://cdn.jsdelivr.net/npm/mathjax-img@3/'}
+    },
+    tex: {
+        packages: {'[+]': ['img']}
+    }
+    };
 
 ### MathJax v2
 
