@@ -23,14 +23,14 @@
     "url": "https://github.com/pkra/mathjax-img/issues"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.16",
-    "@babel/preset-env": "^7.13.15",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
     "babel-loader": "^8.2.2",
     "mathjax-full": "^3.1.4",
-    "standard-version": "^9.2.0",
+    "standard-version": "^9.3.0",
     "terser-webpack-plugin": "^5.1.1",
-    "webpack": "^5.35.1",
-    "webpack-cli": "^4.6.0"
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0"
   },
   "scripts": {
     "build": "node ./node_modules/mathjax-full/components/bin/makeAll",
