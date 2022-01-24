@@ -1,15 +1,5 @@
 /*************************************************************
  *
- *  img.js
- *
- *  Implements TeX macro for embedding images
- *
- *  Usage:
- *
- *  \img{URL}{vertical alignment}{width}{height}
- *
- *  ---------------------------------------------------------------------
- *
  *  Copyright (c) 2020 The MathJax Consortium
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
