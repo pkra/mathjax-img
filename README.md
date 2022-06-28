@@ -23,7 +23,7 @@ With no vertical-align value, the image will sit on the baseline. With no width 
 Install `mathjax-full` and `mathjax-img` and follow the instructions for NodeJS, e.g.,
 
     const { TeX } = require('mathjax/js/input/tex.js');
-    const img = require('mathjax-img').configuration;
+    const img = require('mathjax-img').configuration; // OR import { configuration as img } from 'mathjax-img';
     const tex = new TeX({
         packages: [img.name]
     });
