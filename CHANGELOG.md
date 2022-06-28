@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/pkra/mathjax-img/compare/v3.1.0...v3.2.0) (2022-06-28)
+
+
+### Features
+
+* support optional alt text ([05c880a](https://github.com/pkra/mathjax-img/commit/05c880a6883d930e7d15d04744c4e25899ad22b1)), closes [#2](https://github.com/pkra/mathjax-img/issues/2)
+
 ## [3.1.0](https://github.com/pkra/mathjax-img/compare/v3.0.0...v3.1.0) (2021-05-07)
 
 

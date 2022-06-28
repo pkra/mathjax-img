@@ -1,7 +1,7 @@
 {
   "name": "mathjax-img",
   "main": "./img.js",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "img extension for MathJax's TeX input",
   "keywords": [
     "MathJax",
