@@ -1,10 +1,10 @@
 # mathjax-img
 
-MathJax TeX extension to embed images in math.
+MathJax TeX extension to embed images.
 
 ## MathJax Extension: `img.js`, leveraging mglyph in TeX input
 
-This extension implements a TeX macro `\img` for embedding images in mathematical formula. It leverages the standard MathML mglyph tag which is designed for this purpose.
+This extension implements a TeX macro `\img` for embedding images in mathematical formula.
 
 ## Usage:
 
