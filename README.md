@@ -8,15 +8,15 @@ This extension implements a TeX macro `\img` for embedding images in mathematica
 
 ## Usage:
 
-    \img[valign=<vertical alignment>,width=<width>,height=<height>]{URL}
+    \img[valign=<vertical alignment>,width=<width>,height=<height>][<alttext>]{URL}
 
 or
 
-    \img[<vertical alignment>][<width>][<height>]{URL}
+    \img[<vertical alignment>][<width>][<height>][<alttext>]{URL}
 
-This adds an `\img` macro for inserting images into a MathJax expression. It takes 4 arguments: the URL for the image, the vertical alignment value, the width, and the height of the image. Any of the final three can be blank in order to use the default.
+This adds an `\img` macro for inserting images into a MathJax expression. It takes 5 arguments: the URL for the image and, optionally, the vertical alignment value, the width, the height, and the alttext. Any of the final four can be blank in order to use the default.
 
-With no vertical-align value, the image will sit on the baseline. With no width or height, the image will be its natural size. With one of the width or height specified, the image will be scaled to match that dimension while keeping the aspect ratio the same. If both are given, then image will be scaled to match both dimensions, without regard to the original aspect ratio.
+With no vertical-align value, the image will sit on the baseline. With no width or height, the image will be its natural size. With one of the width or height specified, the image will be scaled to match that dimension while keeping the aspect ratio the same. If both are given, then image will be scaled to match both dimensions, without regard to the original aspect ratio. The alttext will be used to provide a textual alternative in the rendering.
 
 ## Using NodeJS
 
