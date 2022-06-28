@@ -20,8 +20,6 @@ With no vertical-align value, the image will sit on the baseline. With no width 
 
 ## Using NodeJS
 
-### MathJax v3 (mathjax-img v2+)
-
 Install `mathjax-full` and `mathjax-img` and follow the instructions for NodeJS, e.g.,
 
     const { TeX } = require('mathjax/js/input/tex.js');
@@ -30,24 +28,7 @@ Install `mathjax-full` and `mathjax-img` and follow the instructions for NodeJS,
         packages: [img.name]
     });
 
-
-### MathJax v2 (mathjax-img v1 only)
-
-Install mathjax-node and mathjax-img and follow the instructions for mathjax-node, e.g.,
-
-    const mathjax = require('mathjax-node');
-    mathjax.config({
-        paths: {
-            img: path.dirname(require.resolve('mathjax-img')),
-        },
-        extensions:
-            '[img]/img'
-    });
-
-
 ## Using a browser
-
-### MathJax v3
 
 For client-side use, you need load `img.min.js`.
 
@@ -62,21 +43,6 @@ Follow the instructions from the MathJax documentation on [loading a third-party
             packages: {'[+]': ['img']}
         }
     };
-
-### MathJax v2
-
-To use a CDN copy, you need MathJax v2.4 (or higher) and configure a custom path `[img]` as described in the [MathJax documentation](http://docs.mathjax.org/en/latest/options/ThirdParty.html#custom-extension-path-configuration).
-
-Then add the extension to your configuration using the custom path. For example,
-
-     <script type="text/x-mathjax-config>
-        MathJax.Ajax.config.path["img"] = "https://cdn.rawgit.com/pkra/mathjax-img/1.0.0/";
-        MathJax.Hub.Config({
-        extensions: ["tex2jax.js","[img]/img.js"],
-        jax: ["input/TeX","output/HTML-CSS"],
-        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
-        });
-     </script>
 
 ## References
 
