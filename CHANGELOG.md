@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.1](https://github.com/pkra/mathjax-img/compare/v3.2.0...v3.2.1) (2022-06-29)
+
+
+### Bug Fixes
+
+* add minified build ([d6551c6](https://github.com/pkra/mathjax-img/commit/d6551c633cdc48f2193d537964d7755ec31d4ff0)), closes [#16](https://github.com/pkra/mathjax-img/issues/16)
+
 ## [3.2.0](https://github.com/pkra/mathjax-img/compare/v3.1.0...v3.2.0) (2022-06-28)
 
 
