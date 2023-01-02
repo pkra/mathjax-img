@@ -25,7 +25,7 @@
   "devDependencies": {
     "@babel/core": "7.16.12",
     "@babel/preset-env": "7.16.11",
-    "babel-loader": "8.2.3",
+    "babel-loader": "8.3.0",
     "mathjax-full": "^3.2.0",
     "standard-version": "9.3.2",
     "terser-webpack-plugin": "5.3.0",
