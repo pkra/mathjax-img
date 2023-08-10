@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-0](https://github.com/pkra/mathjax-img/compare/v3.2.1...v4.0.0-0) (2023-08-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove old CJS and webpacked version
+
+### Features
+
+* build ESM ([e71cd43](https://github.com/pkra/mathjax-img/commit/e71cd433c038a55094e89740546cf94544d1ce90))
+* initial TS conversion attempt ([4cbf2e8](https://github.com/pkra/mathjax-img/commit/4cbf2e8d972cdcead94e8554b1dcc7e7a02e5139))
+* remove old CJS and webpacked version ([65785d7](https://github.com/pkra/mathjax-img/commit/65785d706edce577097c6fde2213be0a9832409c))
+
 ### [3.2.1](https://github.com/pkra/mathjax-img/compare/v3.2.0...v3.2.1) (2022-06-29)
 
 
