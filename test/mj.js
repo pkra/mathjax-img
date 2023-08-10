@@ -1,22 +1,22 @@
-const { mathjax } = require('mathjax-full/js/mathjax.js');
-const { TeX } = require('mathjax-full/js/input/tex.js');
-const { SVG } = require('mathjax-full/js/output/svg.js');
-const { liteAdaptor } = require('mathjax-full/js/adaptors/liteAdaptor.js');
+import { mathjax } from 'mathjax-full/js/mathjax.js';
+import { TeX } from 'mathjax-full/js/input/tex.js';
+import { SVG } from 'mathjax-full/js/output/svg.js';
+import { liteAdaptor } from 'mathjax-full/js/adaptors/liteAdaptor.js';
 const adaptor = liteAdaptor();
 
-const { RegisterHTMLHandler } = require('mathjax-full/js/handlers/html.js');
+import { RegisterHTMLHandler } from 'mathjax-full/js/handlers/html.js';
 
-const {
+import {
   BaseConfiguration,
-} = require('mathjax-full/js/input/tex/base/BaseConfiguration.js');
-const {
+} from 'mathjax-full/js/input/tex/base/BaseConfiguration.js';
+import {
   AmsConfiguration,
-} = require('mathjax-full/js/input/tex/ams/AmsConfiguration.js');
-const {
+} from 'mathjax-full/js/input/tex/ams/AmsConfiguration.js';
+import {
   BoldsymbolConfiguration,
-} = require('mathjax-full/js/input/tex/boldsymbol/BoldsymbolConfiguration.js');
+} from 'mathjax-full/js/input/tex/boldsymbol/BoldsymbolConfiguration.js';
 
-const img = require('../img.js').configuration;
+import { configuration as img } from '../js/img.js';
 
 RegisterHTMLHandler(adaptor);
 
@@ -34,7 +34,7 @@ const svg = new SVG({
   displayIndent: '0',
 });
 
-module.exports = (documentstring) => {
+export const mj = (documentstring) => {
   const mj = mathjax.document(documentstring, {
     InputJax: tex,
     OutputJax: svg,
