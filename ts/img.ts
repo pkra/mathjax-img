@@ -42,7 +42,7 @@ const CheckDimen = function (dimen: string) {
   throw new TexError("BadImageDimen", "Bad dimension for image: %1", dimen);
 };
 
-interface def {
+interface def extends Record<string, any> {
   src: string;
   alt?: string;
   valign?: string;
