@@ -1,0 +1,18 @@
+{
+  "build": {
+    "id": "[img]/img",
+    "component": "input/tex/extension/img",
+    "js": "../js",
+    "ts": "../ts",
+    "targets": ["img.ts"]
+  },
+  "webpack": {
+    "name": "img",
+    "js": "../js",
+    "libs": [
+      "components/src/input/tex-base/lib",
+      "components/src/core/lib"
+    ],
+    "dist": "../browser/"
+  }
+}
