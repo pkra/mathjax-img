@@ -52,7 +52,7 @@ interface def {
   height?: string;
 }
 
-imgMethods.Img = (parser: TexParser, name: string) {
+imgMethods.Img = function (parser: TexParser, name: string) {
     const arg = parser.GetBrackets(name, "");
     const def: def = {
       src: "",
