@@ -23,11 +23,11 @@
  */
 
 
-import { Configuration } from "mathjax-full/js/input/tex/Configuration.js";
-import { CommandMap } from "mathjax-full/js/input/tex/SymbolMap.js";
-import TexError from "mathjax-full/js/input/tex/TexError.js";
-import TexParser from "mathjax-full/js/input/tex/TexParser.js";
-import { ParseMethod } from "mathjax-full/js/input/tex/Types.js";
+import { Configuration } from "mathjax-full/mjs/input/tex/Configuration.js";
+import { CommandMap } from "mathjax-full/mjs/input/tex/SymbolMap.js";
+import TexError from "mathjax-full/mjs/input/tex/TexError.js";
+import TexParser from "mathjax-full/mjs/input/tex/TexParser.js";
+import { ParseMethod } from "mathjax-full/mjs/input/tex/Types.js";
 
 
 let imgMethods: Record<string, ParseMethod> = {};
