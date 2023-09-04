@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/pkra/mathjax-img/compare/v4.0.0-1...v4.0.0) (2023-09-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* Drops support for MathJax v3.
+
+### Features
+
+* add MathJaxv4-style browser build ([b589914](https://github.com/pkra/mathjax-img/commit/b589914b1ce74b011cfdad5f42e14bbfa7cac562))
+
+
+### Bug Fixes
+
+* **img.ts:** adjust imports ([9d300f8](https://github.com/pkra/mathjax-img/commit/9d300f806e85b43dd520cde161d64017a92a04ff))
+* **img.ts:** fix function declaration ([54252c2](https://github.com/pkra/mathjax-img/commit/54252c2a2c9e0a8c37725afaf8d24b728f889a53))
+* **img.ts:** fix TS type errors ([10d0b91](https://github.com/pkra/mathjax-img/commit/10d0b91711acf33c293c25c63b6f58d7c4e3341c))
+
+
+* Merge pull request #24 from pkra/mathjax4 ([b04eabf](https://github.com/pkra/mathjax-img/commit/b04eabf85862d3fa85fe55894714da076dc9f753)), closes [#24](https://github.com/pkra/mathjax-img/issues/24)
+
 ## [4.0.0-1](https://github.com/pkra/mathjax-img/compare/v4.0.0-0...v4.0.0-1) (2023-08-14)
 
 
