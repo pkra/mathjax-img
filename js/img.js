@@ -1,6 +1,6 @@
-import { Configuration } from "mathjax-full/js/input/tex/Configuration.js";
-import { CommandMap } from "mathjax-full/js/input/tex/SymbolMap.js";
-import TexError from "mathjax-full/js/input/tex/TexError.js";
+import { Configuration } from "mathjax-full/mjs/input/tex/Configuration.js";
+import { CommandMap } from "mathjax-full/mjs/input/tex/SymbolMap.js";
+import TexError from "mathjax-full/mjs/input/tex/TexError.js";
 let imgMethods = {};
 const CheckDimen = function (dimen) {
     if (dimen === "")
@@ -10,7 +10,7 @@ const CheckDimen = function (dimen) {
     }
     throw new TexError("BadImageDimen", "Bad dimension for image: %1", dimen);
 };
-imgMethods.Img = (parser, name) => {
+imgMethods.Img = function (parser, name) {
     const arg = parser.GetBrackets(name, "");
     const def = {
         src: "",
