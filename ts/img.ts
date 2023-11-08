@@ -23,7 +23,7 @@
  */
 
 import { Configuration } from "mathjax-full/mjs/input/tex/Configuration.js";
-import { CommandMap } from "mathjax-full/mjs/input/tex/SymbolMap.js";
+import { CommandMap } from "mathjax-full/mjs/input/tex/TokenMap.js";
 import TexError from "mathjax-full/mjs/input/tex/TexError.js";
 import TexParser from "mathjax-full/mjs/input/tex/TexParser.js";
 import { ParseMethod } from "mathjax-full/mjs/input/tex/Types.js";
