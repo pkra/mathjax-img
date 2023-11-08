@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test of mathjax-img (browser)</title>
+    <script>
+        MathJax = {
+            loader: {
+                load: ['[test]/img.js'],
+                paths: { test: '../browser' }
+            },
+            tex: {
+                packages: { '[+]': ['img'] }
+            }
+        };
+    </script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.4/tex-mml-svg.js">
+</script>
+</head>
+<body>
+    \[
+    x = \vcenter{\img[width=12pt,height=12pt][alttext]{test.svg}}
+    \]
+</body>
+</html>
