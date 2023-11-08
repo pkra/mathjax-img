@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.1](https://github.com/pkra/mathjax-img/compare/v4.0.0...v4.0.1) (2023-11-08)
+
+
+### Bug Fixes
+
+* adjust to mathjax v4-beta.4 ([2a2f722](https://github.com/pkra/mathjax-img/commit/2a2f722d57a35d011ebfd8e65c1027185fd2fdda)), closes [#25](https://github.com/pkra/mathjax-img/issues/25)
+
 ## [4.0.0](https://github.com/pkra/mathjax-img/compare/v4.0.0-1...v4.0.0) (2023-09-04)
 
 
