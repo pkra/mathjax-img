@@ -8,13 +8,35 @@
 
 <style id="MJX-SVG-styles">
 mjx-container[overflow="scroll"][display] {
-  overflow-x: auto;
+  overflow: auto clip;
   min-width: initial !important;
 }
 
 mjx-container[overflow="truncate"][display] {
-  overflow-x: hidden;
+  overflow: hidden clip;
   min-width: initial !important;
+}
+
+mjx-container[display] {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  margin: calc(1em - 2px) 0;
+  padding: 2px 0;
+}
+
+mjx-container[display][width="full"] {
+  display: flex;
+}
+
+mjx-container[justify="left"] {
+  text-align: left;
+  justify-content: left;
+}
+
+mjx-container[justify="right"] {
+  text-align: right;
+  justify-content: right;
 }
 
 mjx-container[jax="SVG"] {
@@ -33,32 +55,16 @@ mjx-container[jax="SVG"] > svg a {
   stroke: blue;
 }
 
-mjx-container[jax="SVG"][display="true"] {
-  display: block;
-  text-align: center;
-  justify-content: center;
-  margin: 1em 0;
+rect[sre-highlighter-added]:has(+ .mjx-selected) {
+  stroke: black;
+  stroke-width: 80px;
 }
 
-mjx-container[jax="SVG"][display="true"][width="full"] {
-  display: flex;
-}
-
-mjx-container[jax="SVG"][justify="left"] {
-  text-align: left;
-  justify-content: left;
-}
-
-mjx-container[jax="SVG"][justify="right"] {
-  text-align: right;
-  justify-content: right;
-}
-
-mjx-container[jax="SVG"] mjx-break::after {
-  content: " ";
+mjx-container[jax="SVG"] mjx-break {
   white-space: normal;
   line-height: 0;
-  font-family: MJX-ZERO;
+  clip-path: rect(0 0 0 0);
+  font-family: MJX-ZERO ! important;
 }
 
 mjx-break[size="0"] {
@@ -182,32 +188,46 @@ foreignObject[data-mjx-xml] {
   overflow: visible;
 }
 
-mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
-  stroke-width: 3;
-}
-
 foreignObject[data-mjx-html] {
   overflow: visible;
+}
+
+mjx-measure-xml {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  line-height: normal;
+  white-space: normal;
 }
 
 mjx-html {
   display: inline-block;
   line-height: normal;
   text-align: initial;
+  white-space: initial;
 }
 
 mjx-html-holder {
   display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
 }
 </style></head>
 
 <body>
 
-<mjx-container class="MathJax" jax="SVG" overflow="overflow" display="true" justify="left"><svg style="vertical-align: -0.792ex;" xmlns="http://www.w3.org/2000/svg" width="6.398ex" height="2.715ex" role="img" focusable="false" viewBox="0 -850 2827.8 1200" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D465" xlink:href="#MJX-MM-I-1D465"></use></g><g data-mml-node="mo" transform="translate(849.8,0)"><use data-c="3D" xlink:href="#MJX-MM-N-3D"></use></g><g data-mml-node="mpadded" data-vertical-align="center" transform="translate(1627.8,0)"><g transform="translate(0 -350)"><g data-mml-node="mglyph"><image width="1200" height="1200" transform="translate(0 1200) matrix(1 0 0 -1 0 0)" preserveAspectRatio="none" aria-label="alttext" href="test.svg"></image></g></g></g></g></g></svg></mjx-container>
+<mjx-container class="MathJax" jax="SVG" overflow="overflow" display="true" justify="left"><svg style="vertical-align: -0.792ex;" xmlns="http://www.w3.org/2000/svg" width="7.026ex" height="2.715ex" role="img" focusable="false" viewBox="0 -850 3105.6 1200" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math" data-latex=" 
+x = \vcenter{\img[width=12pt,height=12pt][alttext]{test.svg}}
+"><g data-mml-node="mi" data-latex="x"><use data-c="1D465" xlink:href="#MJX-NCM-I-1D465"></use></g><g data-mml-node="mo" data-latex="=" transform="translate(849.8,0)"><use data-c="3D" xlink:href="#MJX-NCM-N-3D"></use></g><g data-mml-node="mpadded" data-vertical-align="center" data-latex="\vcenter{\img[width=12pt,height=12pt][alttext]{test.svg}}" transform="translate(1905.6,0)"><g transform="translate(0 -350)"><g data-mml-node="mglyph" data-latex="\img[width=12pt,height=12pt][alttext]{test.svg}"><image width="1200" height="1200" transform="translate(0 1200) matrix(1 0 0 -1 0 0)" preserveAspectRatio="none" aria-label="alttext" href="test.svg"></image></g></g></g></g></g></svg></mjx-container>
 
-<svg style="display: none;" id="MJX-SVG-global-cache"><defs><path id="MJX-MM-I-1D465" d="M527 376C527 428 468 442 434 442C376 442 341 389 329 366C304 432 250 442 221 442C117 442 60 313 60 288C60 278 72 278 72 278C80 278 83 280 85 289C119 395 185 420 219 420C238 420 273 411 273 353C273 322 256 255 219 115C203 53 168 11 124 11C118 11 95 11 74 24C99 29 121 50 121 78C121 105 99 113 84 113C54 113 29 87 29 55C29 9 79-11 123-11C189-11 225 59 228 65C240 28 276-11 336-11C439-11 496 118 496 143C496 153 487 153 484 153C475 153 473 149 471 142C438 35 370 11 338 11C299 11 283 43 283 77C283 99 289 121 300 165L334 302C340 328 363 420 433 420C438 420 462 420 483 407C455 402 435 377 435 353C435 337 446 318 473 318C495 318 527 336 527 376Z"></path><path id="MJX-MM-N-3D" d="M722 347C722 358 713 367 702 367L76 367C65 367 56 358 56 347C56 336 65 327 76 327L702 327C713 327 722 336 722 347ZM722 153C722 164 713 173 702 173L76 173C65 173 56 164 56 153C56 142 65 133 76 133L702 133C713 133 722 142 722 153Z"></path></defs></svg></body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg" id="MJX-SVG-global-cache"><defs><path id="MJX-NCM-I-1D465" d="M527 373C527 419 482 442 432 442C389 442 355 419 329 373C308 419 273 442 222 442C173 442 133 419 101 374C74 335 60 306 60 287C60 278 65 273 75 273C84 273 90 278 92 287C111 345 153 413 220 413C253 413 269 392 269 351C269 330 251 252 216 118C199 51 169 18 126 18C112 18 99 21 88 26C114 36 127 54 127 80C127 106 114 119 87 119C54 119 29 91 29 58C29 12 76-11 125-11C167-11 201 12 228 58C247 12 283-11 335-11C383-11 423 12 455 57C482 96 496 125 496 144C496 153 491 158 481 158C472 158 467 153 464 144C447 87 402 18 337 18C304 18 287 38 287 79C287 92 292 120 303 165L337 300C356 375 387 413 431 413C445 413 458 410 469 405C442 396 429 378 429 351C429 325 443 312 470 312C502 312 527 341 527 373Z"></path><path id="MJX-NCM-N-3D" d="M698 367L80 367C64 367 56 359 56 344C56 329 64 321 80 321L698 321C714 321 722 329 722 344C722 356 711 367 698 367M698 179L80 179C64 179 56 171 56 156C56 141 64 133 80 133L698 133C714 133 722 141 722 156C722 169 711 179 698 179Z"></path></defs></svg></body>
 
 </html>

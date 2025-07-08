@@ -24,16 +24,17 @@
     "url": "https://github.com/pkra/mathjax-img/issues"
   },
   "devDependencies": {
-    "mathjax-full": "4.0.0-beta.4",
+    "@mathjax/src": "4.0.0-rc.4",
     "commit-and-tag-version": "12.5.1",
-    "terser-webpack-plugin": "5.3.0",
-    "typescript": "5.1.6",
+    "terser-webpack-plugin": "5.3.14",
+    "typescript": "5.8.3",
+    "typescript-eslint": "8.33.1",
     "typescript-tools": "0.3.1",
-    "webpack": "5.94.0",
-    "webpack-cli": "^5.1.1"
+    "webpack": "5.99.9",
+    "webpack-cli": "5.1.4"
   },
   "scripts": {
-    "build": "npx tsc &&  node ./node_modules/mathjax-full/components/bin/makeAll --mjs components",
+    "build": "npx tsc &&  node ./node_modules/@mathjax/src/components/bin/makeAll --mjs components",
     "release": "commit-and-tag-version",
     "test": "node test/base.js"
   }

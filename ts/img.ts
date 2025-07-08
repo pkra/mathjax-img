@@ -22,11 +22,11 @@
  * @author peter@krautzource.com (Peter Krautzberger)
  */
 
-import { Configuration } from "mathjax-full/mjs/input/tex/Configuration.js";
-import { CommandMap } from "mathjax-full/mjs/input/tex/TokenMap.js";
-import TexError from "mathjax-full/mjs/input/tex/TexError.js";
-import TexParser from "mathjax-full/mjs/input/tex/TexParser.js";
-import { ParseMethod } from "mathjax-full/mjs/input/tex/Types.js";
+import { Configuration } from "@mathjax/src/js/input/tex/Configuration.js";
+import { CommandMap } from "@mathjax/src/js/input/tex/TokenMap.js";
+import TexError from "@mathjax/src/js/input/tex/TexError.js";
+import TexParser from "@mathjax/src/js/input/tex/TexParser.js";
+import { ParseMethod } from "@mathjax/src/js/input/tex/Types.js";
 
 let imgMethods: Record<string, ParseMethod> = {};
 

@@ -1,6 +1,6 @@
-import { Configuration } from "mathjax-full/mjs/input/tex/Configuration.js";
-import { CommandMap } from "mathjax-full/mjs/input/tex/TokenMap.js";
-import TexError from "mathjax-full/mjs/input/tex/TexError.js";
+import { Configuration } from "@mathjax/src/js/input/tex/Configuration.js";
+import { CommandMap } from "@mathjax/src/js/input/tex/TokenMap.js";
+import TexError from "@mathjax/src/js/input/tex/TexError.js";
 let imgMethods = {};
 const CheckDimen = function (dimen) {
     if (dimen === "")
