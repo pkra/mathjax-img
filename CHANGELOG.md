@@ -1,6 +1,22 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [5.0.0](https://github.com/pkra/mathjax-img/compare/v4.0.1...v5.0.0) (2025-07-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* switches from mathjax-full to @mathjax/src package.
+
+### Features
+
+* upgrade and adjust to mathjax v4.0.0-rc.4 ([123b583](https://github.com/pkra/mathjax-img/commit/123b5837e28425c44b4053c19294c79c104e5c7c)), closes [#27](https://github.com/pkra/mathjax-img/issues/27)
+
+
+### Bug Fixes
+
+* **package:** switch to commit-and-tag-version ([ba78ee5](https://github.com/pkra/mathjax-img/commit/ba78ee579b24b7c4fc51b90313c78a12d8830491))
 
 ### [4.0.1](https://github.com/pkra/mathjax-img/compare/v4.0.0...v4.0.1) (2023-11-08)
 
